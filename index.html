@@ -30,6 +30,9 @@
         </div>
     </header>
 
+    <!-- 다크모드 -->
+    <button class="btn-theme" aria-label="다크모드전환">🌙</button>
+
     <!-- Main 영역 -->
     <section id="main">
         <div>
@@ -41,6 +44,10 @@
             <p>
                 프론트엔드부터 백엔드, 배포까지 한 번에 경험하는 8주 완성 풀스택 개발 스터디입니다.
                 혼자서는 끝까지 완주하기 어려웠던 사이트 프로젝트, 이번엔 함께 끝가지 만들어 봅시다.
+            </p>
+            <p class="clock">
+                <sapn class="clock-date">----년 --월 --일 (-)</sapn>
+                <span class="clock-time">--:--:--</span>
             </p>
         </div>
     </section>
@@ -139,11 +146,11 @@
             <label>Email</label>
             <input type="email" placeholder="abcd@naver.com" class="apply-field">
             <label>참여동기</label>
-            <textarea class="apply-textarea apply-field" placeholder="스터디에 참여하고 싶은 이유를 간단힌 적어주세요"></textarea> <!--여기는 절대 띄어쓰기 X-->
+            <textarea class="apply-textarea apply-field" maxlength="200" placeholder="스터디에 참여하고 싶은 이유를 간단힌 적어주세요"></textarea> <!--여기는 절대 띄어쓰기 X-->
             <input class="apply-btn" type="submit" value="지원하기"> <!--제출 버튼 value로 텍스트 변경-->
-
-            <label>취미
-            <input type="checkbox">영화감상</label> <!--체크박스에서 텍스트를 눌러서 체크되도록 할려면 label로 마지막에 감싸기-->
+            <p class="char-count">0 / 200자</p>
+            <!-- <label>취미 -->
+            <!-- <input type="checkbox">영화감상</label> 체크박스에서 텍스트를 눌러서 체크되도록 할려면 label로 마지막에 감싸기 -->
         </form>
 
         <div class="footer">
