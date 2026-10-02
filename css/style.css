@@ -309,6 +309,83 @@ CURRICULUM
     /* padding: 0 0 1rem 0; 위 아래 같은거 */
 }
 
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 999px;
+    padding: .5rem 1.25rem;
+    transition: .3s;
+}
+
+.tab-btn.active {
+    background: var(--white);
+    color: var(--green);
+}
+
+.tab-panel { /*전부 안보이게 함*/
+    display: none;
+}
+
+.tab-panel.active { /*active가 있는거만 보이게*/
+    display: block;
+}
+
+/* gallery */
+#gallery {
+    padding: 4rem 1rem;
+}
+
+#gallery h2 {
+    background: linear-gradient(var(--light-green), var(--green));
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+}
+
+.gallery-main {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.gallery-thumbs {
+    display: flex;
+    gap: .5rem;
+}
+
+.gallery-thumbs li {
+    flex: 1;
+}
+
+.gallery-thumbs img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gallery-thumbs img:hover,
+.gallery-thumbs img.active {
+    opacity: 1;
+}
+
+.gallery-thumbs img.active {
+    outline: 3px solid var(--light-blue);
+}
 
 /*
 MENTORS

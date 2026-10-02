@@ -70,3 +70,35 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000); // 이후 1초마다 반복 실행
+
+
+// 커리큘럼 탭 메뉴 
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabBtns.forEach((tab) => {
+    tab.addEventListener('click', () => {
+        // 모든 탭 버튼과 패널에서 active 제거
+        tabBtns.forEach((b) => b.classList.remove('active'));
+        tabPanels.forEach((p) => p.classList.remove('active'));
+        
+        // 클릭한 버튼과, 그 버튼의 data-tab 값과 같은 id를 가진 패널에 active를 붙인다
+        tab.classList.add('active'); // 클릭한 버튼 켜기
+        document.getElementById(tab.dataset.tab).classList.add('active'); //짝 패널 켜기
+    })
+})
+
+// 스터디 사진 갤러리
+const galleryMain = document.querySelector('.gallery-main');
+const galleryThumbs = document.querySelectorAll('.gallery-thumbs img')
+
+galleryThumbs.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+        galleryMain.src = thumb.src;
+        galleryMain.alt = thumb.alt;
+    
+
+        galleryThumbs.forEach((t) => t.classList.remove('active'));
+        thumb.classList.add('active')
+    });
+});
